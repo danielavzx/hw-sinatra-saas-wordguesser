@@ -81,6 +81,7 @@ class WordGuesserApp < Sinatra::Base
       erb :win
     else
       redirect '/show'
+    end
   end
 
   get '/lose' do
@@ -89,5 +90,6 @@ class WordGuesserApp < Sinatra::Base
       erb :lose
     else 
       redirect '/show'
+    end
   end
 end
