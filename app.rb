@@ -8,10 +8,12 @@ class WordGuesserApp < Sinatra::Base
 
   set :host_authorization, { permitted_hosts: [] }  
 
+  #execute before every SaaS request
   before do
     @game = session[:game] || WordGuesserGame.new('')
   end
 
+  #execute after every SaaS request
   after do
     session[:game] = @game
   end
